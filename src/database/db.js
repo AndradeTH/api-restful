@@ -6,7 +6,7 @@ function connect() {
 
     const db = mongoose.connection
 
-    db.once('opne', () => {
+    db.once('open', () => {
         console.log('Conected to database!')
     })
 
