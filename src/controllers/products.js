@@ -39,7 +39,7 @@ async function put(req, res) {
         message: 'success',
         product,
     })
-    
+
 /*   
     ESTE MÉTODO NÃO RETORNA O VALOR ATUALIZADO MAS ATUALIZA TBM
 const product = await ProductsModel.findOne({ _id: id })
@@ -53,8 +53,22 @@ const product = await ProductsModel.findOne({ _id: id })
 */
 }
 
+async function remove(req, res) {
+    const { id } = req.params
+
+    const remove = await ProductsModel.deleteOne({ _id: id })
+
+    const message = remove ? "success" : "error"
+
+  
+    res.send({ 
+        message,
+    })
+}
+
 module.exports = {
     get,
     post,
     put,
+    remove,
 }

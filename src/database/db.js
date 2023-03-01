@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 function connect() {
 
-    mongoose.connect('mongodb+srv://nfdkbsp.mongodb.net/api-restful')
+    mongoose.connect('mongodb+srv://.nfdkbsp.mongodb.net/api-restful')
 
     const db = mongoose.connection
 
